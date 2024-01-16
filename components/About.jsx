@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import Headline from './Headline';
-
+import aboutus from '../public/assets/aboutus.jpg'
 const About = () => {
   return (
     <div className='bg-purple-100 mt-[-41px]'>
@@ -27,7 +27,7 @@ const About = () => {
             <li>කාන්තාවන්ගේ ප්‍රජනක සෞඛ්‍ය පිළිබඳ දැනුවත් තීරන ගැනීමට කාන්තාවන් සවිබල ගැන්වීම.</li>
             </ul></div>
           <div className=' '>
-            <Image className=' lg:h-[500px] w-full' src='/Assets/aboutus.jpg' width='1028' height='440' alt="about" />
+            <Image className=' lg:h-[500px] w-full' src={aboutus} width='1028' height='440' alt="about" />
           </div>
         </div>
       </div>
