@@ -31,7 +31,11 @@ const Onehalf = () => {
           // Filter babies based on age (e.g., 1.5 years)
           const filteredBabiesData = data.filter((baby) => {
             const age = calculateAge(baby.birthday);
-            return age.year === 1 && age.month === 5 && age.day > 15 && age.year === 1 && age.month === 6 && age.day < 20;
+            const isWithinRange =
+            (age.year === 1 && age.month === 5 && age.day >= 15) ||
+            (age.year === 1 && age.month === 6 && age.day <= 20); 
+
+          return isWithinRange;
           });
           setFilteredBabies(filteredBabiesData);
         } else {
@@ -62,11 +66,11 @@ const Onehalf = () => {
           {filteredBabies.length > 0 ? (
             <>
             <div className=''>
-              <h2 className='text-center text-2xl'>අවුරුදු 1 1/2 කණ්ඩායම</h2>
+              <h2 className='text-center text-2xl text-purple-700'>අවුරුදු 1 1/2 කණ්ඩායම</h2>
               <div >
               {filteredBabies.map((baby, index) => (
                 <div key={index} className='p-5 '>
-                  <div className=' bg-sky-200 py-3 px-2 rounded-lg leading-8 '>
+                  <div className=' bg-purple-300 py-3 px-2 rounded-lg leading-8 '>
                     <p className='font-semibold'>Name: <span className='font-normal text-blue-700'>{baby.name}</span></p>
                     <p className='font-semibold'>Mother: <span className='font-normal text-blue-700'>{baby.mother}</span></p>
                     <p className='font-semibold'>Address: <span className='font-normal text-blue-700'>{baby.address}</span></p>
@@ -79,7 +83,7 @@ const Onehalf = () => {
               </div>
             </>
           ) : (
-            <p>No babies found .</p>
+            <p className='text-purple-700'>No babies found .</p>
           )}
           
         </>

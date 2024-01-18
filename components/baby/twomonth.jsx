@@ -32,7 +32,11 @@ const BabyComponent = () => {
           // Filter babies based on age (e.g., 15-30 days)
           const filteredBabiesData = data.filter((baby) => {
             const age = calculateAge(baby.birthday);
-            return age.year === 0 && age.month === 1 && age.day > 15 && age.year === 0 && age.month === 2 && age.day < 20;
+            const isWithinRange =
+            (age.year === 0 && age.month === 1 && age.day >= 15) ||
+            (age.year === 0 && age.month === 2 && age.day <= 20); 
+
+          return isWithinRange;
           });
           setFilteredBabies(filteredBabiesData);
         } else {
@@ -62,11 +66,12 @@ const BabyComponent = () => {
         <>
           {filteredBabies.length > 0 ? (
             <>
-              <h2 className='text-center text-2xl'>මාස 2 කණ්ඩායම</h2>
+              <h2 className='text-center text-2xl text-purple-700'>මාස 2 කණ්ඩායම</h2>
+              
               {filteredBabies.map((baby, index) => (
                 <div key={index} className='m-2'>
-                  <div className=' bg-sky-200 py-3 px-2 rounded-lg leading-8 '>
-                    <p className='font-semibold'>Name: <span className='font-normal text-blue-700'>{baby.name}</span></p>
+                  <div className=' bg-purple-300 py-3 px-2 rounded-lg leading-8 '>
+                    <p className='font-semibold '>Name: <span className='font-normal text-blue-700'>{baby.name}</span></p>
                     <p className='font-semibold'>Mother: <span className='font-normal text-blue-700'>{baby.mother}</span></p>
                     <p className='font-semibold'>Address: <span className='font-normal text-blue-700'>{baby.address}</span></p>
                     <p className='font-semibold'>Birthdate: <span className='font-normal text-blue-700'>{baby.birthday}</span></p>
@@ -76,7 +81,7 @@ const BabyComponent = () => {
               ))}
             </>
           ) : (
-            <p>No babies found .</p>
+            <p className='text-purple-700'>No babies found .</p>
           )}
         </>
       )}

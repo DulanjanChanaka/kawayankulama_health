@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -31,7 +32,11 @@ const Oneyear = () => {
           // Filter babies based on age (e.g., 1 year)
           const filteredBabiesData = data.filter((baby) => {
             const age = calculateAge(baby.birthday);
-            return age.year === 0 && age.month === 11 && age.day > 15 && age.year === 1 && age.month === 0 && age.day < 20;
+            const isWithinRange =
+            (age.year === 0 && age.month === 11 && age.day >= 15) ||
+            (age.year === 1 && age.month === 0 && age.day <= 20); 
+
+          return isWithinRange;
           });
           setFilteredBabies(filteredBabiesData);
         } else {
@@ -61,10 +66,10 @@ const Oneyear = () => {
         <>
           {filteredBabies.length > 0 ? (
             <>
-              <h2 className='text-center text-2xl'>අවුරුදු 1 කණ්ඩායම</h2>
+              <h2 className='text-center text-2xl text-purple-700'>අවුරුදු 1 කණ්ඩායම</h2>
               {filteredBabies.map((baby, index) => (
                 <div key={index} className='p-5 '>
-                  <div className=' bg-sky-200 py-3 px-2 rounded-lg leading-8 '>
+                  <div className=' bg-purple-300 py-3 px-2 rounded-lg leading-8 '>
                     <p className='font-semibold'>Name: <span className='font-normal text-blue-700'>{baby.name}</span></p>
                     <p className='font-semibold'>Mother: <span className='font-normal text-blue-700'>{baby.mother}</span></p>
                     <p className='font-semibold'>Address: <span className='font-normal text-blue-700'>{baby.address}</span></p>
@@ -75,7 +80,7 @@ const Oneyear = () => {
               ))}
             </>
           ) : (
-            <p>No babies found .</p>
+            <p className='text-purple-700'>No babies found .</p>
           )}
         </>
       )}

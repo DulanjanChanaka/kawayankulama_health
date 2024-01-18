@@ -5,6 +5,7 @@ import Educational from '@/components/Educational'
 import Footer from '@/components/Footer'
 import Homepage from '@/components/HomePage'
 import Navbar from '@/components/Navbar'
+
 import React from 'react'
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       <About/>
       <Contact/>
       <Footer/>
+
     </div>
   )
 }
