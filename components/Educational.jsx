@@ -110,31 +110,28 @@ useEffect(()=>{
        
       </div>
       {modalVisible && selectedPost && (
-        <div className='fixed top-0 left-0 w-full h-full flex item-center justify-center'>
-          <div className="modal-bg fixed top-0 left-0 w-full h-full bg-black opacity-70 "></div>
-          <div className="modal-container bg-white w-5/6 md:max-w-md mx-auto rounded lg:h-fit shadow-lg z-50 mt-[110px] mb-[20px] overflow-y-auto pb-5 ">
-            <div className="modal-content py-4 text-left px-6 ">
-              <div className='font-bold text-center'>{selectedPost.title}</div>
-              <div className='w-[300px] h-[300px] bg-cover' style={{ backgroundImage: `url('${selectedPost.url}')` }} />
+  <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center'>
+    <div className="modal-bg fixed top-0 left-0 w-full h-full bg-black opacity-70"></div>
+    <div className="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded lg:h-fit shadow-lg z-50 mt-[110px] mb-[20px] overflow-y-auto pb-5">
+      <div className="modal-content py-4 text-left px-6">
+        <div className='font-bold text-center'>{selectedPost.title}</div>
+        <div className='w-[300px] h-[300px] bg-cover' style={{ backgroundImage: `url('${selectedPost.url}')` }} />
+      </div>
+      <div className='px-5  text-black'>
+        <p>{selectedPost.description}</p>
+      </div>
+      <div className='pb-10 pr-10'>
+        <button
+          onClick={() => setModalVisible(false)}
+          className="bg-red-600 text-white hover:bg-gray-400 py-1 px-3 rounded float-right mt-5"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
 
-            </div>
-            <div className='px-5'><p>{selectedPost.description}</p></div>
-            <div className='pb-10 pr-10'>
-            <button
-              onClick={() => setModalVisible(false)}
-              className=" bg-red-600 text-white hover:bg-gray-400 py-1 px-3 rounded float-right"
-            >
-              Close
-            </button>
-
-            </div>
-
-
-
-          </div>
-
-        </div>
-      )}
     </div>
 
   )

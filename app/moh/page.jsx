@@ -42,11 +42,11 @@ function Moh() {
 
 
     return (
-        <div className='bg-purple-200 h-screen'>
+        <div className='bg-purple-200 h-[1150px]'>
             <div className="top-0 left-0 sticky">
                 <Navbar />
             </div>
-            <h3 className='text-center pt-[120px] font-semibold text-2xl text-purple-600'>MOH සායන  </h3>
+            <h3 className='text-center pt-[120px] font-semibold text-2xl text-purple-600 '>MOH සායන  </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-[50px]  lg:grid-cols-4 gap-4 p-4">
                 {loading? (<Backdrop
             sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
@@ -91,7 +91,7 @@ function Moh() {
                     <div className="modal-bg fixed top-0 left-0 w-full h-full bg-black opacity-50"></div>
                     <div className="modal-container bg-white w-3/4 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto pb-5">
                         <div className="modal-content py-4 text-left px-6">
-                          <h3 className='pb-5'>{selectedPost.title}</h3>
+                          <h3 className='pb-5text-purple-700 font-bold text-lg text-center'>{selectedPost.title}</h3>
 
 
                           <p className="text-gray-600 text-base font-semibold py-3">

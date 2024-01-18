@@ -40,12 +40,12 @@ function Woman() {
 
 
     return (
-        <div className='bg-purple-200 h-screen'>
+        <div className='bg-purple-200 h-[950px]'>
                   <div className="top-0 left-0 sticky">
         <Navbar />
       </div>
 
-      <h3 className='text-center font-semibold text-2xl pt-[120px] text-purple-600'>බර කිරීමේ සායන  </h3>
+      <h3 className='text-center font-semibold text-2xl pt-[120px] text-purple-600'>සුවනාරි / පවුල් සංවිධාන </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-[50px]  lg:grid-cols-4 gap-4 p-4">
         {loading ? (
           // Display a loading spinner while data is being fetched
@@ -89,7 +89,7 @@ function Woman() {
                         <div className="modal-content py-4 text-left px-6 ">
                            
                             <div className='text-center py-3'> 
-                            <h3>{selectedPost.title}</h3>
+                            <h3 className='text-black'>{selectedPost.title}</h3>
                             </div>
 
 

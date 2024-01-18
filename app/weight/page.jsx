@@ -40,7 +40,7 @@ function Weight() {
 
 
     return (
-        <div className='bg-purple-200 h-screen'>
+        <div className='bg-purple-200 h-[950px]'>
                   <div className="top-0 left-0 sticky">
         <Navbar />
       </div>
@@ -89,7 +89,7 @@ function Weight() {
                         <div className="modal-content py-4 text-left px-6 ">
                            
                             <div className='text-center py-3'> 
-                            <h3 className='text-black font-bold text-2xl'>{selectedPost.title}</h3>
+                            <h3 className='text-purple-700 text-center font-bold text-2xl'>{selectedPost.title}</h3>
                             </div>
 
 

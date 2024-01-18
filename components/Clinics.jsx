@@ -56,7 +56,7 @@ const Clinics = () => {
                                 </div>
                                 <div className='flex flex-col items-center justify-center'>
                                     <h3 className='text-center text-lg font-bold text-purple-600'>මාතෘ හා ළඳරු ළමා සායන</h3>
-                                    <h3 className='text-center text-lg font-bold text-purple-600'>බොරලුවැව </h3>
+
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ const Clinics = () => {
                         </div>
                     </Link>
 
-                    <Link href="/medical">
+                    <Link href="/baby">
                         <div className='p-6 bg-purple-200 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 h-[180px]'>
                             <div className='grid grid-cols text-center  gap-4 justify-center items-center'>
                                 <div className='m-auto'>

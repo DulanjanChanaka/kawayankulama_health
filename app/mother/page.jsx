@@ -35,7 +35,7 @@ function Mother() {
     fetchPersonPost();
   }, []);
   return (
-    <div className='bg-purple-200'>
+    <div className='bg-purple-200 h-[1150px]'>
       <div className="top-0 left-0 sticky">
                 <Navbar />
             </div>
@@ -80,7 +80,7 @@ function Mother() {
                     <div className="modal-bg fixed top-0 left-0 w-full h-full bg-black opacity-50"></div>
                     <div className="modal-container bg-white w-3/4 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
                         <div className="modal-content py-4 text-left px-6">
-                          <h3>{selectedPost.title}</h3>
+                          <h3 className='text-purple-700 font-bold text-lg text-center'>{selectedPost.title}</h3>
 
 
                           <p className="text-gray-600 text-base font-semibold py-3">
