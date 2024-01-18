@@ -31,7 +31,7 @@ const Threeyears = () => {
           // Filter babies based on age (e.g., 3 years)
           const filteredBabiesData = data.filter((baby) => {
             const age = calculateAge(baby.birthday);
-            return age.year === 2 && age.month === 11 && age.day > 15 && age.year === 3 && age.month === 1 && age.day < 20;
+            return age.year === 2 && age.month === 11 && age.day > 15 && age.year === 3 && age.month === 0 && age.day < 20;
           });
           setFilteredBabies(filteredBabiesData);
         } else {
