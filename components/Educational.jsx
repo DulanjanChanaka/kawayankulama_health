@@ -42,6 +42,7 @@ useEffect(()=>{
 
 
   var settings = {
+    
     dots: true,
     infinite: false,
     speed: 500,
